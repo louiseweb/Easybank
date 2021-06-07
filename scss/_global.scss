@@ -1,0 +1,71 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  color: $Grayish-Blue;
+}
+
+// Container
+.container {
+  margin: 0 auto;
+
+  @include for-mobile-down {
+    padding: 0 2.5rem;
+  }
+
+  @include for-tablet-down {
+    padding: 0 4rem;
+  }
+
+  @include for-desktop-up {
+    padding: 0 4rem;
+    max-width: 115rem;
+  }
+}
+
+// Buttons
+.btn {
+  width: 16.3rem;
+  height: 4.4rem;
+  border-radius: 5rem;
+  color: $White;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: $Lime-Green;
+  background: linear-gradient(
+    180deg,
+    rgba(49, 211, 92, 1) 0%,
+    rgba(43, 183, 218, 1) 100%
+  );
+  cursor: pointer;
+  transition: $transition-speed;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: $Grayish-Blue;
+}
+
+// Li
+li {
+  list-style: none;
+}

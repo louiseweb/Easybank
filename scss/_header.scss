@@ -1,0 +1,68 @@
+.nav {
+  height: 6.4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include for-desktop-up {
+    height: 8rem;
+  }
+
+  &__hamburger {
+    cursor: pointer;
+    @include for-desktop-up {
+      display: none;
+    }
+  }
+
+  &__links {
+    @include for-tablet-down {
+      display: none;
+    }
+    @include for-desktop-up {
+      display: flex;
+      height: 100%;
+    }
+  }
+
+  &__link {
+    @include for-desktop-up {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border-bottom: 0.5rem rgba(49, 211, 92, 0) solid;
+      transition: $transition-speed;
+    }
+  }
+
+  &__link:hover {
+    @include for-desktop-up {
+      border-bottom: 0.5rem rgba(49, 211, 92, 1) solid;
+    }
+  }
+
+  &__link a {
+    @include for-desktop-up {
+      transition: $transition-speed;
+    }
+  }
+
+  &__link a:hover {
+    @include for-desktop-up {
+      color: $Dark-Blue;
+    }
+  }
+
+  &__link:not(:last-child) {
+    @include for-desktop-up {
+      margin-right: 3rem;
+    }
+  }
+
+  &__btn {
+    @include for-tablet-down {
+      display: none;
+    }
+  }
+}

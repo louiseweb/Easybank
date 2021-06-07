@@ -1,0 +1,23 @@
+// Media Queries
+
+// Mobile Down
+
+// Desktop up
+@mixin for-desktop-up {
+  @media (min-width: 901px) {
+    @content;
+  }
+}
+
+// Tablet Down
+@mixin for-tablet-down {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-mobile-down {
+  @media (max-width: 480px) {
+    @content;
+  }
+}

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Easybank landing page</title>
@@ -12,21 +13,21 @@
 
 <body>
 
-  <header>
+  <header class="header">
     <!-- Nav Section -->
-    <nav>
+    <nav class="nav container">
       <img class="nav__logo" src="imgs/logo.svg" alt="Easybank Logo">
       <!-- Mobile Nav -->
-      <button class="hamburger__btn"></button>
+      <img class="nav__hamburger" src="imgs/icon-hamburger.svg" alt="" srcset="">
       <!-- Desktop Nav -->
       <ul class="nav__links">
-        <li class="nav__link">Home</li>
-        <li class="nav__link">About</li>
-        <li class="nav__link">Contact</li>
-        <li class="nav__link">Blog</li>
-        <li class="nav__link">Careers</li>
+        <li class="nav__link"><a href="#">Home</a></li> 
+        <li class="nav__link"><a href="">About</a></li> 
+        <li class="nav__link"><a href="">Contact</a></li>
+        <li class="nav__link"><a href="">Blog</a></li>
+        <li class="nav__link"><a href="">Careers</a></li>
       </ul>
-      <button class="btn" href="#">Request Invite</button>
+      <button class="btn nav__btn" href="www.google.co.uk">Request Invite</button>
     </nav>
     <!-- Hero Section -->
     <img class="hero__img" src="imgs/image-mockups.png" alt="Phone Mockup">
@@ -85,25 +86,31 @@
 
   <!-- Footer Section -->
   <footer class="footer">
+    <img class="footer__logo" src="imgs/logo.svg" alt="">
+    <div class="footer__social-icons">
+      <img class="footer__social-icon" src="imgs/icon-twitter.svg" alt="Twitter">
+      <img class="footer__social-icon" src="imgs/icon-pinterest.svg" alt="Pintrest">
+      <img class="footer__social-icon" src="imgs/icon-youtube.svg" alt="YouTube">
+      <img class="footer__social-icon" src="imgs/icon-instagram.svg" alt="Instagram">
+      <img class="footer__social-icon" src="imgs/icon-facebook.svg" alt="Facebook">
+    </div>
 
+    <ul class="footer__links">
+      <li><a class="footer__link" href="#">About Us</a></li>
+      <li><a class="footer__link" href="#">Contact</a></li>
+      <li><a class="footer__link" href="#">Blog</a></li>
+      <li><a class="footer__link" href="#">Careers</a></li>
+      <li><a class="footer__link" href="#">Support</a></li>
+      <li><a class="footer__link" href="#">Privacy Policy</a></li>
+    </ul>
+    
+    <button class="btn" href="#">Request Invite</button>
+    <p class="footer__copyright">© Easybank. All Rights Reserved</p>
   </footer>
-
-
-
-  About Us
-  Contact
-  Blog
-  Careers
-  Support
-  Privacy Policy
-
-  Request Invite
-
-  © Easybank. All Rights Reserved
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Louise Webster</a>.
   </div>
   <script src="js/script.js"></script>
 </body>
