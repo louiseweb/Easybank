@@ -29,7 +29,7 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) and (min-width: 481px) {
   .container {
     padding: 0 4rem;
   }
@@ -71,6 +71,28 @@ li {
   list-style: none;
 }
 
+.img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  top: 6.4rem;
+  background-color: aqua;
+  position: absolute;
+}
+
 .nav {
   height: 6.4rem;
   width: 100%;
@@ -83,6 +105,7 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  display: relative;
 }
 
 @media (min-width: 901px) {
@@ -91,27 +114,43 @@ li {
   }
 }
 
-.nav__hamburger {
+.nav__hamburger-open, .nav__hamburger-close {
   cursor: pointer;
 }
 
 @media (min-width: 901px) {
-  .nav__hamburger {
+  .nav__hamburger-open, .nav__hamburger-close {
     display: none;
   }
 }
 
-@media (max-width: 900px) {
+.nav__links {
+  position: absolute;
+  width: calc(100% - 5rem);
+  top: 8.8rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 3.5rem 0;
+}
+
+@media (max-width: 900px) and (min-width: 481px) {
   .nav__links {
-    display: none;
+    width: calc(100% - 8rem);
   }
 }
 
 @media (min-width: 901px) {
   .nav__links {
+    position: relative;
+    width: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    top: 0rem;
+    background: none;
+    border-radius: 0;
+    padding: 0;
     height: 100%;
   }
 }
@@ -137,6 +176,10 @@ li {
   }
 }
 
+.nav__link a {
+  color: #2d314d;
+}
+
 @media (min-width: 901px) {
   .nav__link a {
     -webkit-transition: all 300ms ease-in-out;
@@ -150,15 +193,23 @@ li {
   }
 }
 
+.nav__link:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 @media (min-width: 901px) {
   .nav__link:not(:last-child) {
     margin-right: 3rem;
   }
 }
 
-@media (max-width: 900px) {
+.nav__btn {
+  display: none;
+}
+
+@media (min-width: 901px) {
   .nav__btn {
-    display: none;
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */

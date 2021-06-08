@@ -1,22 +1,21 @@
 // Media Queries
 
-// Mobile Down
-
 // Desktop up
-@mixin for-desktop-up {
+@mixin desktop {
   @media (min-width: 901px) {
     @content;
   }
 }
 
 // Tablet Down
-@mixin for-tablet-down {
-  @media (max-width: 900px) {
+@mixin tablet {
+  @media (max-width: 900px) and (min-width: 481px) {
     @content;
   }
 }
 
-@mixin for-mobile-down {
+// Mobile Down
+@mixin mobile {
   @media (max-width: 480px) {
     @content;
   }

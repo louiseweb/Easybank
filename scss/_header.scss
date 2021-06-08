@@ -1,33 +1,59 @@
+.overlay {
+  width: 100%;
+  height: 100vh;
+  top: 6.4rem;
+  background-color: aqua;
+  position: absolute;
+}
+
 .nav {
   height: 6.4rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  display: relative;
 
-  @include for-desktop-up {
+  @include desktop {
     height: 8rem;
   }
 
-  &__hamburger {
+  &__hamburger-open,
+  &__hamburger-close {
     cursor: pointer;
-    @include for-desktop-up {
+
+    @include desktop {
       display: none;
     }
   }
 
   &__links {
-    @include for-tablet-down {
-      display: none;
+    position: absolute;
+    width: calc(100% - 5rem);
+    top: 8.8rem;
+    background-color: $White;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 3.5rem 0;
+
+    @include tablet {
+      width: calc(100% - 8rem);
     }
-    @include for-desktop-up {
+
+    @include desktop {
+      position: relative;
+      width: auto;
       display: flex;
+      top: 0rem;
+      background: none;
+      border-radius: 0;
+      padding: 0;
       height: 100%;
     }
   }
 
   &__link {
-    @include for-desktop-up {
+    @include desktop {
       height: 100%;
       display: flex;
       align-items: center;
@@ -37,32 +63,36 @@
   }
 
   &__link:hover {
-    @include for-desktop-up {
+    @include desktop {
       border-bottom: 0.5rem rgba(49, 211, 92, 1) solid;
     }
   }
 
   &__link a {
-    @include for-desktop-up {
+    color: $Dark-Blue;
+    @include desktop {
       transition: $transition-speed;
     }
   }
 
   &__link a:hover {
-    @include for-desktop-up {
+    @include desktop {
       color: $Dark-Blue;
     }
   }
 
   &__link:not(:last-child) {
-    @include for-desktop-up {
+    margin-bottom: 2rem;
+    @include desktop {
       margin-right: 3rem;
     }
   }
 
   &__btn {
-    @include for-tablet-down {
-      display: none;
+    display: none;
+
+    @include desktop {
+      display: block;
     }
   }
 }
