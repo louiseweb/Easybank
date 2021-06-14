@@ -11,16 +11,22 @@
   <title>Frontend Mentor | Easybank landing page</title>
 </head>
 
-<body>
+<body id="body">
 
+<!-- Header Section -->
   <header class="header">
+    <!-- Mobile Menu -->
     <div class="overlay hide" id="overlay"></div> 
     <!-- Nav Section -->   
-    <nav class="nav container">       
-        <img class="nav__logo" src="imgs/logo.svg" alt="Easybank Logo">    
+    <nav>
+      <div class="nav container">
+        <img class="nav__logo" src="imgs/logo.svg" alt="Easybank Logo">
         <!-- Mobile Nav -->
-        <img class="nav__hamburger-open" id="hamburger-btn-open" src="imgs/icon-hamburger.svg" alt="Hamburger Menu">
-        <img class="nav__hamburger-close hide" id="hamburger-btn-close" src="imgs/icon-close.svg" alt="Hamburger Menu">
+        <div class="nav__hamburger" id="hamburger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <!-- Desktop Nav -->
         <ul class="nav__links hide" id="nav-links">
           <li class="nav__link"><a href="#">Home</a></li> 
@@ -29,16 +35,21 @@
           <li class="nav__link"><a href="">Blog</a></li>
           <li class="nav__link"><a href="">Careers</a></li>
         </ul>
-        <button class="btn nav__btn" href="www.google.co.uk">Request Invite</button>  
+        <button class="btn nav__btn" href="www.google.co.uk">Request Invite</button> 
+      </div>            
     </nav>
 
     <!-- Hero Section -->
     <section class="hero container">
-      <img class="hero__img img" src="imgs/image-mockups.png" alt="Phone Mockup">
-      <h1 class="hero__header">Next generation digital banking</h1>
-      <p class="hero__body">Take your financial life online. Your Easybank account will be a one-stop-shop
-        for spending, saving, budgeting, investing, and much more.</p>
-      <button class="btn" href="#">Request Invite</button>
+      <div class="hero__img-container">
+        <img class="hero__img img" src="imgs/image-mockups.png" alt="Phone Mockup">
+      </div>
+      <div class="hero__text">
+        <h1 class="hero__header">Next generation digital banking</h1>
+        <p class="hero__body">Take your financial life online. Your Easybank account will be a one-stop-shop
+          for spending, saving, budgeting, investing, and much more.</p>
+        <button class="hero__btn btn" href="#">Request Invite</button>
+      </div>     
     </section>
   </header>
 
